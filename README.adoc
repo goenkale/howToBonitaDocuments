@@ -1,0 +1,149 @@
+= how-to-bonita-documents
+Generated with Bonita
+v0.0.1, {docdate}
+:toc: left
+:toc-title: Table of contents
+:toclevels: 2
+:bonita-version: 7.14
+:imagesdir: ./documentation/images
+:icons: font
+:sectnums: numbered
+:sectanchors:
+:hardbreaks:
+:experimental:
+
+== Processes
+
+=== image:icons/Pool.png[title="Process"] [[_9ba96d12-ec50-36f5-b177-09d02f1380c5]]DocumentExample (1.0)
+
+This is an example to show how to work with document variables in Bonita
+
+image::processes/DocumentExample-1.0.png[]
+
+==== icon:users[] Actors
+
+[grid=cols,options="header",cols="1,3a",stripes=even,frame=topbot]
+|===
+|Name                                                                                               |Description                                                 
+|[[_69e3f5f6-e749-3412-9e8c-a9381c1bd025]]Employee actor icon:play-circle[title="Process initiator"]|This is an example of actor that is mapped to any ACME users
+|===
+
+==== icon:file[] Documents
+
+[grid=cols,options="header",cols="1,3a",stripes=even,frame=topbot]
+|===
+|Name                                               |Description                                                                                                     
+|[[_bce3acb1-961e-3ddc-b4b0-cf4b724bb5fa]]myDocument|this is the variable that holds the document as a reference to the BLOB data type in the Bonita Engine database.
+|===
+
+==== Instantiation form
+
+===== [[_959f8bb7-3aed-32e1-a1bf-25f116ccb5ca]]image:icons/page.png[] newDocument
+
+Page generated with Bonita UI designer
+
+.Widgets
+[caption=,grid=cols,options="header",cols="1,2,4a",stripes=even,frame=topbot]
+|===
+|Type  |Label        |Description
+|Upload|My Document  |           
+|Button|Submit       |           
+|Text  |Default label|           
+|Text  |             |           
+|===
+
+==== icon:list-alt[] Contract inputs
+
+[verse]
+{
+    myDocumentDocumentInput ([olive]_File_)
+}
+
+==== image:icons/Lane.png[title="Lane"] Employee lane (<<_69e3f5f6-e749-3412-9e8c-a9381c1bd025,icon:user[title="Actor"] Employee actor>>)
+
+_No description available_
+
+==== [[_8f80aec9-75b8-3058-93b7-901325060c7b]]image:icons/StartEvent.png[title="StartEvent"] Get a document
+
+_No description available_
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_bf1f5b0f-619d-3972-9a84-da041bbdef87,Check document>>*
+
+==== [[_bf1f5b0f-619d-3972-9a84-da041bbdef87]]image:icons/Task.png[title="Task"] Check document
+
+_No description available_
+
+*Previous flow element(s)*: <<_8f80aec9-75b8-3058-93b7-901325060c7b,Get a document>>
+
+===== [[_21cda17c-fc14-3270-b17a-950da128ee25]]image:icons/page.png[] checkDocument
+
+Page generated with Bonita UI designer
+
+.Widgets
+[caption=,grid=cols,options="header",cols="1,2,4a",stripes=even,frame=topbot]
+|===
+|Type      |Label        |Description
+|Title     |             |           
+|Text      |             |           
+|FileViewer|             |           
+|Button    |Submit       |           
+|Text      |             |           
+|Text      |Default label|           
+|===
+
+== Process diagrams
+
+=== DocumentExample (1.0)
+
+_No description available_
+
+image::diagrams/DocumentExample-1.0.png[]
+
+== Organization
+
+=== Groups
+
+// Uncomment this line in organization_template.tpl to display the group hierarchy diagram.
+// image::groups.svg[link=images/groups.svg]
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Path                     |Display name          |Description                                                                         
+|/acme                    |Acme                  |This group represents the acme department of the ACME organization                  
+|/acme/hr                 |Human Resources       |This group represents the human resources department of the ACME organization       
+|/acme/finance            |Finance               |This group represents the finance department of the ACME organization               
+|/acme/it                 |Infrastructure        |This group represents the infrastructure department of the ACME organization        
+|/acme/marketing          |Marketing             |This group represents the marketing department of the ACME organization             
+|/acme/production         |Production            |This group represents the production department of the ACME organization            
+|/acme/production/rd      |Research & Development|This group represents the research & development department of the ACME organization
+|/acme/production/services|Services              |This group represents the services department of the ACME organization              
+|/acme/sales              |Sales                 |This group represents the sales department of the ACME organization                 
+|/acme/sales/europe       |Europe                |This group represents the europe department of the ACME organization                
+|/acme/sales/asia         |Asia                  |This group represents the asia department of the ACME organization                  
+|/acme/sales/latin_america|Latin America         |This group represents the latin america department of the ACME organization         
+|/acme/sales/north_america|North America         |This group represents the north america department of the ACME organization         
+|===
+
+=== Roles
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Name  |Display name|Description
+|member|Member      |           
+|===
+
+=== Profiles
+
+[grid=cols,options="header",cols="1e,3a",stripes=even,frame=topbot]
+|===
+|Name                                                    |Description                                                                                                                 
+|[[_1300bb05-3afe-3c2d-af8b-543b4fb16c32]]User           |The user can view and perform tasks and can start a new case of a
+process.                                                  
+|[[_080d4ce6-9f34-37f2-a270-2edb021a60ec]]Administrator  |The administrator can install a process, manage the organization, and
+handle some errors (for example, by replaying a task).
+|[[_ec4b68ef-adbc-302e-8811-94d9a8fc9032]]Process manager|The Process manager can supervise designated processes, and manage
+cases and tasks of those processes.                      
+|===
+

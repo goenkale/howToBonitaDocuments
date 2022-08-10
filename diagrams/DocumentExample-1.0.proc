@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_acJmwBh9Ee23ZoJmbGrrDg" name="DocumentExample" author="bonitasoft" bonitaVersion="7.14.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_acJmwRh9Ee23ZoJmbGrrDg" name="DocumentExample">
+    <elements xmi:type="process:Pool" xmi:id="_acJmwRh9Ee23ZoJmbGrrDg" documentation="This is an example to show how to work with document variables in Bonita" name="DocumentExample">
       <elements xmi:type="process:Lane" xmi:id="_acJmwhh9Ee23ZoJmbGrrDg" name="Employee lane" actor="_acJm2xh9Ee23ZoJmbGrrDg">
         <elements xmi:type="process:StartEvent" xmi:id="_acJmwxh9Ee23ZoJmbGrrDg" name="Get a document" outgoing="_acJm2Bh9Ee23ZoJmbGrrDg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_acJmxBh9Ee23ZoJmbGrrDg" name="" content="" returnTypeFixed="true"/>
@@ -38,7 +38,7 @@
       <contract xmi:type="process:Contract" xmi:id="_acJm3Bh9Ee23ZoJmbGrrDg">
         <inputs xmi:type="process:ContractInput" xmi:id="_owQlkBh9Ee23ZoJmbGrrDg" name="myDocumentDocumentInput" type="FILE" dataReference="myDocument"/>
       </contract>
-      <documents xmi:type="process:Document" xmi:id="_mVrZgBh9Ee23ZoJmbGrrDg" name="myDocument" documentType="CONTRACT" contractInput="_owQlkBh9Ee23ZoJmbGrrDg">
+      <documents xmi:type="process:Document" xmi:id="_mVrZgBh9Ee23ZoJmbGrrDg" documentation="this is the variable that holds the document as a reference to the BLOB data type in the Bonita Engine database." name="myDocument" documentType="CONTRACT" contractInput="_owQlkBh9Ee23ZoJmbGrrDg">
         <mimeType xmi:type="expression:Expression" xmi:id="_mVrZgRh9Ee23ZoJmbGrrDg" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_mVrZghh9Ee23ZoJmbGrrDg" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_mVrZgxh9Ee23ZoJmbGrrDg" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
